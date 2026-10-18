@@ -1,10 +1,10 @@
+
 package com.example.pvpstyles;
 
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.widget.ButtonWidget;
-import net.minecraft.client.option.ParticlesMode;
 import net.minecraft.text.Text;
 
 public class StylesScreen extends Screen {
@@ -43,7 +43,9 @@ public class StylesScreen extends Screen {
             () -> Settings.INSTANCE.lessParticles, v -> {
                 Settings.INSTANCE.lessParticles = v;
                 MinecraftClient mc = MinecraftClient.getInstance();
-                mc.options.getParticles().setValue(v ? ParticlesMode.MINIMAL : ParticlesMode.ALL);
+                var particles = mc.options.getParticles();
+                var modes = particles.getValue().getClass().getEnumConstants();
+                particles.setValue(v ? modes[modes.length - 1] : modes[0]);
                 mc.options.write();
             }));
         y += H + GAP + 8;
