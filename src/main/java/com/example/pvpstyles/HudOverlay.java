@@ -26,11 +26,11 @@ public final class HudOverlay {
 
         int y = 5;
         if (Settings.INSTANCE.showFps) {
-            ctx.drawTextWithShadow(mc.textRenderer, "FPS: " + mc.getCurrentFps(), 5, y, 0xFFFFFF);
+            ctx.drawTextWithShadow(mc.textRenderer, "FPS: " + mc.getCurrentFps(), 5, y, 0xFFFFFFFF);
             y += 11;
         }
         if (Settings.INSTANCE.showCps) {
-            ctx.drawTextWithShadow(mc.textRenderer, "CPS: " + count(LEFT) + " | " + count(RIGHT), 5, y, 0xFFFFFF);
+            ctx.drawTextWithShadow(mc.textRenderer, "CPS: " + count(LEFT) + " | " + count(RIGHT), 5, y, 0xFFFFFFFF);
         }
     }
 

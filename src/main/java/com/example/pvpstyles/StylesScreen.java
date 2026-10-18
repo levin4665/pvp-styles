@@ -1,4 +1,3 @@
-
 package com.example.pvpstyles;
 
 import net.minecraft.client.MinecraftClient;
