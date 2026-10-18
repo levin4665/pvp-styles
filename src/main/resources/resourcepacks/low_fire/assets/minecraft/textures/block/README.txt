@@ -1,0 +1,1 @@
+Eigene fire_0.png und fire_1.png hier ablegen (Feuer am Block), dazu unter textures/block/ ggf. fire_0.png.mcmeta. Fuer die Ansicht in der Ego-Perspektive: textures/misc bzw. block/fire_1.png. Niedriges Feuer = unterer Teil der Animationsframes deckend, oberer Teil transparent.
